@@ -6,7 +6,6 @@
     <h1>Create new post</h1>
 
     @if ($errors->any())
-
         <ul class="alert">
             @foreach($errors-> all() as $error)
                 <li>{{$error}}</li>
@@ -14,7 +13,7 @@
         </ul>
     @endif
 
-    {!! Form::open(['route'=>'categories.store', 'method' => 'post']) !!}
+    {!! Form::open(['route'=>'admin.posts.store', 'method' => 'post']) !!}
 
     @include('admin.posts._form')
 
